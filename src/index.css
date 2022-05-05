@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  /* 样式复用 */
+
+  .input {
+    @apply w-full p-2 bg-slate-600 rounded border-2 border-transparent hover:border-slate-500 focus:border-slate-300 outline-none;
+  }
+  .btn {
+    @apply px-2 rounded bg-red-500 text-gray-200 hover:bg-red-600;
+  }
+}
+
+@tailwind utilities;
+
+@layer utilities {
+  /* 写原生 CSS */
+
+  .todo-item:hover button {
+    visibility: visible;
+  }
+  .todo-item button {
+    visibility: hidden;
+  }
+}
